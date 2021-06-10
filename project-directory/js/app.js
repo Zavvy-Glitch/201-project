@@ -18,15 +18,15 @@ alert('Welcome, ' + userName + ' I appreciate you visitng! Let\'s get started!')
 let favoriteFruitsArray = ['pineapple', 'pomegranate', 'lychee', 'green grape', 'cara cara orange', 'mango', 'persimmon', 'guava', 'peach', 'rambutan'];
 console.log('Preferred Fruits', favoriteFruitsArray);
 
-let userGuess = prompt ('Can you guess one of my favorite fruits?');
-console.log('User Guess', userGuess);
+// let userGuess = prompt ('Can you guess one of my favorite fruits?');
+// console.log('User Guess', userGuess);
 
-for (let index = 0; index < favoriteFruitsArray.length; index++){
-  if(userGuess === favoriteFruitsArray[index]) {
-    alert('Correct! That\'s surprising!');
-  }
-  console.log('checking fruits', favoriteFruitsArray[index]);
-}
+// for (let index = 0; index < favoriteFruitsArray.length; index++){
+//   if(userGuess === favoriteFruitsArray[index]) {
+//     alert('Correct! That\'s surprising!');
+//   }
+//   console.log('checking fruits', favoriteFruitsArray[index]);
+// }
 
 let userNumberGuess = 6;
 let correctAnswer = false;
@@ -48,8 +48,6 @@ while (correctAnswer === false && userNumberGuess > 0) {
   }
   userNumberGuess--;
 }
-
-
 
 // start of question one
 
