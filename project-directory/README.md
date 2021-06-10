@@ -3,7 +3,8 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 
 06/09 - Working on mastering arrays through guessing games developed in JS.
       - Added a 10 ten list to index.html
-      -
+      - CSS working of backgrounds and text color
+      - 
 
 Author: Chattray Chea
 Links and Resources
