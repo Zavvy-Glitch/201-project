@@ -28,6 +28,7 @@ console.log('Preferred Fruits', favoriteFruitsArray);
 //   console.log('checking fruits', favoriteFruitsArray[index]);
 // }
 
+function groupFunction(){
 let userNumberGuess = 6;
 let correctAnswer = false;
 // start outer loop here
@@ -48,6 +49,9 @@ while (correctAnswer === false && userNumberGuess > 0) {
   }
   userNumberGuess--;
 }
+}
+
+groupFunction();
 
 // start of question one
 
