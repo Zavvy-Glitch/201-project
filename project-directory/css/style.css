@@ -1,0 +1,32 @@
+h1 {
+    
+    font-size: 4em;
+    text-align: right;
+    font-style:oblique;
+    color:#2E6699;
+    background-color:#E6B15C;
+}
+
+body {
+    background-color:#997233;
+}
+
+h2{
+    font-size: 2em;
+    text-align: left;
+    font-style:oblique;
+    color:#5CA4E6;
+}
+
+#intro{
+    color:#80C1FF;
+    text-align: left;
+    border-style:solid;
+}
+
+#angkor{
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+
+}
