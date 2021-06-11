@@ -29,29 +29,58 @@ console.log('Preferred Fruits', favoriteFruitsArray);
 // }
 
 function groupFunction(){
-let userNumberGuess = 6;
-let correctAnswer = false;
-// start outer loop here
-while (correctAnswer === false && userNumberGuess > 0) {
-  let userGuess = prompt ('Can you guess one of my favorite fruits?');
-  // start inner loop here
-  for (let index = 0; index < favoriteFruitsArray.length; index++){
+  let userNumberGuess = 6;
+  let correctAnswer = false;
+  // start outer loop here
+  while (correctAnswer === false && userNumberGuess > 0) {
+    let userGuess = prompt ('Can you guess one of my favorite fruits?');
+    // start inner loop here
+    for (let index = 0; index < favoriteFruitsArray.length; index++){
     // for << will need to contain (declaration ; comparison ; change}
-    if(userGuess === favoriteFruitsArray[index]) {
-      alert('Correct! That\'s surprising!');
-      console.log('checking fruits', favoriteFruitsArray[index]);
-      correctAnswer = true;
-      break;
+      if(userGuess === favoriteFruitsArray[index]) {
+        alert('Correct! That\'s surprising!');
+        console.log('checking fruits', favoriteFruitsArray[index]);
+        correctAnswer = true;
+        break;
+      }
     }
+    if (correctAnswer === false) {
+      alert('Sorry, that wasn\'t correct. Please try again');
+    }
+    userNumberGuess--;
   }
-  if (correctAnswer === false) {
-    alert('Sorry, that wasn\'t correct. Please try again');
-  }
-  userNumberGuess--;
-}
 }
 
 groupFunction();
+
+function userGuessingGame() {
+  let correctAnswers = Math.floor(Math.random() * 100) + 1;
+  console.log(correctAnswers);
+  let userAttempts = 8;
+  for(let i = 0; i < userAttempts; i++){
+    let originalUserGuess = prompt('Please Enter a Number 1 - 100');
+    let userGuess = parseInt(originalUserGuess);
+    while(userGuess < 1 || userGuess > 100){
+      userGuess = prompt('Incorrect Range.  Please input a Number between 1 - 100');
+    }
+    if (userGuess === correctAnswers){
+      alert('Congrats! ' + userName + ' You got it right!');
+      break;
+    } else if(userGuess < correctAnswers){
+      alert('That guess was too low. Take another guess.');
+    } else if (userGuess > correctAnswers) {
+      alert('That guess was too high. Try again.');
+    } else {
+      alert('Something else went Wrong. You sure you chose a number?');
+    }
+    console.log(i);
+    if (i === userAttempts - 1){
+      alert('You didn\'t guess the right number. The right number is: ' + correctAnswers);
+    }
+  }
+}
+
+userGuessingGame();
 
 // start of question one
 
@@ -66,7 +95,7 @@ if (lowercaseQone === 'yes' || lowercaseQone === 'y') {
   alert('Thank you, ' + userName + '.' + ' I don\'t feel 31!');
 }
 
-// start of question two
+// // start of question two
 
 let qTwo = prompt('Would you believe I hate socks?');
 let lowercaseQtwo = qTwo.toLowerCase();
